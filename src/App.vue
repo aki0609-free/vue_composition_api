@@ -1,15 +1,18 @@
 <template>
-  <section class="container">
-    <h2>{{ userName }}</h2>
-  </section>
+  <div>
+    <the-counter></the-counter>
+    <control-center></control-center>
+  </div>
 </template>
 
 <script>
+import ControlCenter from './components/ControlCenter.vue';
+import TheCounter from './components/TheCounter.vue';
+
 export default {
-  data() {
-    return {
-      userName: 'Maximilian',
-    };
+  components: {
+    ControlCenter,
+    TheCounter,
   },
 };
 </script>
@@ -25,6 +28,7 @@ html {
 
 body {
   margin: 0;
+  text-align: center;
 }
 
 .container {
